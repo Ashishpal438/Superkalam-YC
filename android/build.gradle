@@ -10,6 +10,9 @@ buildscript {
     repositories {
         google()
         mavenCentral()
+        maven {
+			url "https://dl.cloudsmith.io/public/cometchat/cometchat-pro-android/maven/"
+		}
     }
     dependencies {
         classpath("com.android.tools.build:gradle")
@@ -19,3 +22,4 @@ buildscript {
 }
 
 apply plugin: "com.facebook.react.rootproject"
+ 
