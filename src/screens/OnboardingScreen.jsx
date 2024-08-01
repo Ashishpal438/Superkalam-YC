@@ -1,7 +1,6 @@
-import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet} from 'react-native';
 import React from 'react';
 import Card from '../components/Card';
-import {width} from '../utils';
 import Icon from 'react-native-vector-icons/Feather';
 import Margin from '../components/Margin';
 import {useNavigation} from '@react-navigation/native';

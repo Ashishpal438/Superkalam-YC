@@ -42,7 +42,7 @@ const CreditCard = () => {
 
 const styles = StyleSheet.create({
   container: {
-    width: width - 50,
+    width: width - 40,
     alignSelf: 'center',
   },
   topSection: {
