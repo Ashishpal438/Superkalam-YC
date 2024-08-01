@@ -4,8 +4,11 @@ import Card from '../components/Card';
 import {width} from '../utils';
 import Icon from 'react-native-vector-icons/Feather';
 import Margin from '../components/Margin';
+import {useNavigation} from '@react-navigation/native';
+import ThemedButton from '../components/ThemedButton';
 
 const OnboardingScreen = () => {
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
       <Text style={{fontSize: 24, fontWeight: 500, color: '#000'}}>
@@ -36,9 +39,14 @@ const OnboardingScreen = () => {
         Invest in projects that make a difference. Join us in supporting
         impactful initiatives and create positive change in the world.
       </Text>
-      <TouchableOpacity style={styles.button}>
-        <Text style={{color: '#fff', fontSize:16}}>Get Started</Text>
-      </TouchableOpacity>
+      <ThemedButton
+        text={'Get Started'}
+        textColor={'#fff'}
+        color={'#171717'}
+        onPress={() => {
+          navigation.navigate('Home');
+        }}
+      />
     </View>
   );
 };
@@ -83,15 +91,6 @@ const styles = StyleSheet.create({
     gap: 10,
     opacity: 0.7,
     elevation: 1,
-  },
-  button: {
-    width: width - 40,
-    backgroundColor: '#171717',
-    padding: 15,
-    borderRadius: 10,
-    alignItems: 'center',
-    alignSelf: 'center',
-    marginTop: 40,
   },
 });
 

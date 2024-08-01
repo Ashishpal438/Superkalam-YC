@@ -1,12 +1,12 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-const RootNavigation = () => {
+const Scanner = () => {
   return (
     <View>
-      <Text>RootNavigation</Text>
+      <Text>Scanner</Text>
     </View>
   )
 }
 
-export default RootNavigation
+export default Scanner

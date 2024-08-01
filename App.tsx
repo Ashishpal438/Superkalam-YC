@@ -6,20 +6,11 @@
  */
 
 import React from 'react';
-import type {PropsWithChildren} from 'react';
-import {
-  SafeAreaView,
-  StatusBar,
-  StyleSheet,
-  useColorScheme,
-} from 'react-native';
+import {SafeAreaView, StatusBar, useColorScheme} from 'react-native';
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import OnboardingScreen from './src/screens/OnboardingScreen';
-
-type SectionProps = PropsWithChildren<{
-  title: string;
-}>;
+import RootNavigation from './src/navigation/RootNavigation';
 
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
@@ -35,7 +26,7 @@ function App(): React.JSX.Element {
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
         backgroundColor={backgroundStyle.backgroundColor}
       />
-      <OnboardingScreen />
+      <RootNavigation />
     </SafeAreaView>
   );
 }
