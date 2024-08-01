@@ -9,8 +9,9 @@ import React from 'react';
 import {SafeAreaView, StatusBar, useColorScheme} from 'react-native';
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
-import OnboardingScreen from './src/screens/OnboardingScreen';
 import RootNavigation from './src/navigation/RootNavigation';
+import {Provider} from 'react-redux';
+import store from './src/store/store';
 
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
@@ -26,7 +27,9 @@ function App(): React.JSX.Element {
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
         backgroundColor={backgroundStyle.backgroundColor}
       />
-      <RootNavigation />
+      <Provider store={store}>
+        <RootNavigation />
+      </Provider>
     </SafeAreaView>
   );
 }
