@@ -12,6 +12,7 @@ import {Colors} from 'react-native/Libraries/NewAppScreen';
 import RootNavigation from './src/navigation/RootNavigation';
 import {Provider} from 'react-redux';
 import store from './src/store/store';
+import {GestureHandlerRootView} from 'react-native-gesture-handler';
 
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
@@ -28,7 +29,9 @@ function App(): React.JSX.Element {
         backgroundColor={backgroundStyle.backgroundColor}
       />
       <Provider store={store}>
-        <RootNavigation />
+        <GestureHandlerRootView style={{flex: 1}}>
+          <RootNavigation />
+        </GestureHandlerRootView>
       </Provider>
     </SafeAreaView>
   );

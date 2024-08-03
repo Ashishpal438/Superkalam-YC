@@ -1,0 +1,66 @@
+export const creditCards = [
+  {
+    number: '1253 5432 3521 3090',
+    name: 'Sarah Muller',
+    expiry: '09/24',
+    company: 'VISA',
+    color: '#C8E9CA',
+    numberColor: 'black',
+  },
+  {
+    number: '1653 5932 4581 9090',
+    name: 'Sarah Muller',
+    expiry: '09/24',
+    company: 'VISA',
+    color: 'black',
+    numberColor: '#fff',
+  },
+];
+
+export const cards = [
+  {
+    logo: 'https://cdn.britannica.com/33/4833-004-828A9A84/Flag-United-States-of-America.jpg',
+    company: 'VISA',
+    balance: '$40,500.80',
+    accountNumber: '****9934',
+    valid: '05/28',
+    color: '#C8E9CA',
+    currency: 'US Dollar',
+  },
+  {
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Flag_of_India.svg/1280px-Flag_of_India.svg.png',
+    company: 'MasterCard',
+    balance: '$12,340.00',
+    accountNumber: '****1234',
+    valid: '12/23',
+    color: '#87DCFB',
+    currency: 'US Dollar',
+  },
+  {
+    logo: 'https://cdn.britannica.com/33/4833-004-828A9A84/Flag-United-States-of-America.jpg',
+    company: 'American Express',
+    balance: '$22,500.40',
+    accountNumber: '****5678',
+    valid: '09/24',
+    color: '#E6B9A6',
+    currency: 'US Dollar',
+  },
+  {
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Flag_of_Russia.svg/1920px-Flag_of_Russia.svg.png',
+    company: 'Discover',
+    balance: '$8,750.60',
+    accountNumber: '****8765',
+    valid: '03/25',
+    color: '#379777',
+    currency: 'US Dollar',
+  },
+  {
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/1920px-Flag_of_Brazil.svg.png',
+    company: 'VISA',
+    balance: '$15,100.20',
+    accountNumber: '****4321',
+    valid: '11/26',
+    color: '#F9E2AF',
+    currency: 'US Dollar',
+  },
+];

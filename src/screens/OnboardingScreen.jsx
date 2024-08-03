@@ -14,11 +14,31 @@ const OnboardingScreen = () => {
         ProfitPilot.
       </Text>
       <View style={styles.hiddenCard}>
-        <Card color={'#FFF'} />
+        <Card
+          color={'#FFF'}
+          logo={
+            'https://cdn.britannica.com/33/4833-004-828A9A84/Flag-United-States-of-America.jpg'
+          }
+          company={'Discover'}
+          balance={'$8,750.60'}
+          accountNumber={'****8765'}
+          valid={'03/25'}
+          currency={'US Dollar'}
+        />
       </View>
       <View style={{marginTop: 130}}></View>
       <View style={styles.midCard}>
-        <Card color={'#C8E9CA'} />
+        <Card
+          color={'#C8E9CA'}
+          logo={
+            'https://cdn.britannica.com/33/4833-004-828A9A84/Flag-United-States-of-America.jpg'
+          }
+          company={'Discover'}
+          balance={'$8,750.60'}
+          accountNumber={'****8765'}
+          valid={'03/25'}
+          currency={'US Dollar'}
+        />
       </View>
       <View>
         <View style={styles.request}>

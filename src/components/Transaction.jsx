@@ -2,21 +2,27 @@ import {View, Text, StyleSheet} from 'react-native';
 import React from 'react';
 import Icon from 'react-native-vector-icons/Feather';
 
-const Transaction = () => {
+const Transaction = ({destination, amount, type, time}) => {
   return (
     <View style={styles.container}>
       <View style={styles.leftSection}>
         <View style={styles.iconContainer}>
-          <Icon name={'arrow-up-right'} size={20} color={'black'} />
+          <Icon
+            name={type === 'request' ? 'arrow-up-right' : 'arrow-down-left'}
+            size={20}
+            color={'black'}
+          />
         </View>
         <View>
-          <Text>Transfer to Filmansyah A.</Text>
-          <Text>04:03PM</Text>
+          <Text style={{fontSize: 16, color: 'black'}}>
+            {type === 'request' ? 'Transfer to' : 'Recieved From'} {destination}
+          </Text>
+          <Text style={{fontSize: 12}}>04:03PM</Text>
         </View>
       </View>
       <View>
         <Text>
-          - <Text>$20</Text>
+          <Text style={{fontSize: 16, color: 'black'}}>${amount}</Text>
         </Text>
       </View>
     </View>

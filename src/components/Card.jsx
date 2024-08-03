@@ -2,7 +2,15 @@ import {View, Text, StyleSheet, Image} from 'react-native';
 import React from 'react';
 import {width} from '../utils';
 
-const Card = ({color}) => {
+const Card = ({
+  color,
+  logo,
+  company,
+  balance,
+  accountNumber,
+  currency,
+  valid,
+}) => {
   return (
     <View style={[styles.container, {backgroundColor: color}]}>
       {/* Top Section */}
@@ -12,31 +20,39 @@ const Card = ({color}) => {
           <Image
             style={styles.logo}
             source={{
-              uri: 'https://cdn.britannica.com/33/4833-004-828A9A84/Flag-United-States-of-America.jpg',
+              uri: logo,
             }}
           />
-          <Text>US Dollar</Text>
+          <Text style={{fontSize: 14, color: 'black'}}>{currency}</Text>
         </View>
-        <Text>VISA</Text>
+        <Text style={{fontSize: 24, fontWeight: 700, color: 'black'}}>
+          {company}
+        </Text>
       </View>
 
       {/* Mid Section */}
       <View>
         <Text>Your balance</Text>
         <View>
-          <Text>$40,500.80</Text>
+          <Text style={{fontSize: 24, fontWeight: 500, color: 'black'}}>
+            {balance}
+          </Text>
         </View>
       </View>
 
       {/* Bottom Section */}
       <View style={styles.bottomSection}>
         <View>
-          <Text>Account Number</Text>
-          <Text>****9934</Text>
+          <Text style={{fontSize: 14, fontWeight: 500, color: 'white'}}>
+            Account Number
+          </Text>
+          <Text>{accountNumber}</Text>
         </View>
         <View>
-          <Text>Valid Thru</Text>
-          <Text>05/28</Text>
+          <Text style={{fontSize: 14, fontWeight: 500, color: 'white'}}>
+            Valid Thru
+          </Text>
+          <Text>{valid}</Text>
         </View>
       </View>
     </View>
@@ -65,9 +81,9 @@ const styles = StyleSheet.create({
     borderRadius: 20,
   },
   logo: {
-    width: 30,
-    height: 30,
-    borderRadius: 15,
+    width: 20,
+    height: 20,
+    borderRadius: 10,
   },
   bottomSection: {
     flexDirection: 'row',

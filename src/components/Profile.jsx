@@ -14,7 +14,7 @@ const Profile = () => {
         />
         <View>
           <Text>Welcome back,</Text>
-          <Text>Sarah Muller</Text>
+          <Text style={{color: 'black'}}>Sarah Muller</Text>
         </View>
       </View>
       <View style={styles.notification}>

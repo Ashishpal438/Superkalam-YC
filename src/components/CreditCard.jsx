@@ -3,37 +3,48 @@ import React from 'react';
 import {width} from '../utils';
 import Icon from 'react-native-vector-icons/Ionicons';
 
-const CreditCard = () => {
+const CreditCard = ({
+  key,
+  color,
+  numberColor,
+  number,
+  name,
+  company,
+  expiry,
+}) => {
+  const num = number.split(' ');
   return (
-    <View style={styles.container}>
-      <View style={styles.topSection}>
-        <Icon name={'wifi'} size={20} color={'black'} />
+    <View style={styles.container} key={key}>
+      <View style={[styles.topSection, {backgroundColor: color}]}>
+        <Icon name={'wifi'} size={20} color={numberColor} />
         <View
           style={{
             flexDirection: 'row',
             justifyContent: 'space-between',
           }}>
-          <Text style={{fontSize: 20, color: 'black', fontWeight: 500}}>
-            1253
+          <Text style={{fontSize: 20, color: numberColor, fontWeight: 500}}>
+            {num[0]}
           </Text>
-          <Text style={{fontSize: 20, color: 'black', fontWeight: 500}}>
-            5432
+          <Text style={{fontSize: 20, color: numberColor, fontWeight: 500}}>
+            {num[1]}
           </Text>
-          <Text style={{fontSize: 20, color: 'black', fontWeight: 500}}>
-            3521
+          <Text style={{fontSize: 20, color: numberColor, fontWeight: 500}}>
+            {num[2]}
           </Text>
-          <Text style={{fontSize: 20, color: 'black', fontWeight: 500}}>
-            3090
+          <Text style={{fontSize: 20, color: numberColor, fontWeight: 500}}>
+            {num[3]}
           </Text>
         </View>
       </View>
       <View style={styles.bottomSection}>
         <View>
-          <Text>Sarah Muller</Text>
-          <Text>Exp 09/24</Text>
+          <Text>{name}</Text>
+          <Text>
+            Exp <Text style={{color: 'black'}}>{expiry}</Text>
+          </Text>
         </View>
         <Text style={{fontSize: 24, color: 'black', fontWeight: 700}}>
-          VISA
+          {company}
         </Text>
       </View>
     </View>
@@ -46,7 +57,6 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
   },
   topSection: {
-    backgroundColor: '#C8E9CA',
     padding: 20,
     borderTopRightRadius: 20,
     borderTopLeftRadius: 20,
