@@ -38,7 +38,7 @@ export const cards = [
   },
   {
     logo: 'https://cdn.britannica.com/33/4833-004-828A9A84/Flag-United-States-of-America.jpg',
-    company: 'American Express',
+    company: 'VISA',
     balance: '$22,500.40',
     accountNumber: '****5678',
     valid: '09/24',

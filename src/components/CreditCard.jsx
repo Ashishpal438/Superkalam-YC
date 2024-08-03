@@ -3,18 +3,10 @@ import React from 'react';
 import {width} from '../utils';
 import Icon from 'react-native-vector-icons/Ionicons';
 
-const CreditCard = ({
-  key,
-  color,
-  numberColor,
-  number,
-  name,
-  company,
-  expiry,
-}) => {
+const CreditCard = ({color, numberColor, number, name, company, expiry}) => {
   const num = number.split(' ');
   return (
-    <View style={styles.container} key={key}>
+    <View style={styles.container}>
       <View style={[styles.topSection, {backgroundColor: color}]}>
         <Icon name={'wifi'} size={20} color={numberColor} />
         <View

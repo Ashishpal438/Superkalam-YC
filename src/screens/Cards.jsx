@@ -16,15 +16,16 @@ const Cards = () => {
         {creditCards &&
           creditCards.map((creditCard, index) => {
             return (
-              <CreditCard
-                key={index}
-                name={creditCard.name}
-                color={creditCard.color}
-                company={creditCard.company}
-                expiry={creditCard.expiry}
-                numberColor={creditCard.numberColor}
-                number={creditCard.number}
-              />
+              <View key={index}>
+                <CreditCard
+                  name={creditCard.name}
+                  color={creditCard.color}
+                  company={creditCard.company}
+                  expiry={creditCard.expiry}
+                  numberColor={creditCard.numberColor}
+                  number={creditCard.number}
+                />
+              </View>
             );
           })}
       </View>
